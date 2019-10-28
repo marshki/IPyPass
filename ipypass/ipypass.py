@@ -30,5 +30,6 @@ def twelve_bit_passwd():
 if __name__ == '__main__':
     ADDRESS = ipv4_addr_check()
     SPLIT_ADDRESS = ADDRESS.split('.', 4)
-    print(eight_bit_passwd())
-    print(twelve_bit_passwd())
+    print('8-bit   ', '12-bit      ')
+    print('--------', '------------')
+    print(eight_bit_passwd(), twelve_bit_passwd())
