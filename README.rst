@@ -20,3 +20,6 @@ Python3 utility for converting IPv4 IP address to an 8- or 12-bit password.
 
 License
 -------
+LICENSE_
+
+.. _LICENSE: https://github.com/marshki/IPyPass/blob/master/LICENSE.txt
