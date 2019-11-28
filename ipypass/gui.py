@@ -1,31 +1,14 @@
-from tkinter import *
+#!/usr/bin/env python3
 
-class Window(Frame):
+#import Tkinter as tk
 
+def eight_bit_passwd(address):
+    """Transform IP address to 8-bit password.
+    """
 
-    def __init__(self, master=None):
-        Frame.__init__(self, master)                 
-        self.master = master
-        self.init_window()
+    split_address = address.split('.', 4)
 
-    #Creation of init_window
-    def init_window(self):
+    return((split_address[2] + '*' +
+            str(int(split_address[3]) + 8)).ljust(8, '*'))
 
-        self.master.title("IPyPass")
-
-        # allowing the widget to take the full space of the root window
-        self.pack(fill=BOTH, expand=1)
-
-        # creating a button instance
-        quitButton = Button(self, text="Derp!")
-
-        # placing the button on window
-        quitButton.place(x=0, y=0)
-
-root = Tk()
-
-#size of the window
-root.geometry("400x300")
-
-app = Window(root)
-root.mainloop()  
+print(eight_bit_passwd("216.165.95.149"))
