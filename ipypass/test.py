@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+"""Take IPv4 address and return 8-bit or 12-bit password.
+"""
+
 import PySimpleGUI as sg
 
 sg.change_look_and_feel('Reddit')
@@ -23,12 +26,12 @@ while True:
                 """Transform IP address to 8-bit password.
                 """
                 return((SPLIT_ADDRESS[2] + '*' +
-                    str(int(SPLIT_ADDRESS[3]) + 8)).ljust(8, '*'))
+                        str(int(SPLIT_ADDRESS[3]) + 8)).ljust(8, '*'))
 
-            CALC = eight_bit_passwd()
-        except:
-            CALC = 'Invalid'
+            EIGHT_BIT = eight_bit_passwd()
+        except Exception as e:
+            EIGHT_BIT = 'Invalid input.'
 
-        window['output'].update(CALC)
+        window['output'].update(EIGHT_BIT)
     else:
         break
