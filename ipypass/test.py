@@ -8,7 +8,7 @@ import PySimpleGUI as sg
 sg.change_look_and_feel('Reddit')
 
 LAYOUT = [[sg.Txt('Enter IP address:')],
-          [sg.In(size=(16, 1), key='IP_ADDRESS')],
+          [sg.In(size=(16, 1), key='ip_address')],
           [sg.Txt('', size=(16, 1), key='output_1')],
           [sg.Txt('', size=(16, 1), key='output_2')],
           [sg.Button('Convert', bind_return_key=True)]]
@@ -20,35 +20,35 @@ def ipypass():
     """
 
     while True:
-        EVENT, VALUES = window.read()
+        event, values = window.read()
 
-        if EVENT is not None:
+        if event is not None:
             try:
-                IP_ADDRESS = str(VALUES['IP_ADDRESS'])
-                SPLIT_ADDRESS = IP_ADDRESS.split('.', 4)
+                ip_address = str(values['ip_address'])
+                split_address = ip_address.split('.', 4)
 
                 def eight_bit_passwd():
                     """Transform IP address to 8-bit password.
                     """
-                    return((SPLIT_ADDRESS[2] + '*' +
-                            str(int(SPLIT_ADDRESS[3]) + 8)).ljust(8, '*'))
+                    return((split_address[2] + '*' +
+                            str(int(split_address[3]) + 8)).ljust(8, '*'))
 
                 def twelve_bit_passwd():
                     """Transform IP address to 12-bit password.
                     """
-                    return((SPLIT_ADDRESS[2] + '*' +
-                            str(int(SPLIT_ADDRESS[3]) + 12) + '*' 
-                            + SPLIT_ADDRESS[1]).ljust(12, '*'))
+                    return((split_address[2] + '*' +
+                            str(int(split_address[3]) + 12) + '*'
+                            + split_address[1]).ljust(12, '*'))
 
-                EIGHT_BIT = eight_bit_passwd()
-                TWELVE_BIT = twelve_bit_passwd()
+                eight_bit = eight_bit_passwd()
+                twelve_bit = twelve_bit_passwd()
 
             except Exception as e:
-                EIGHT_BIT = 'Invlid input.'
-                TWELVE_BIT = 'Try again.'
+                eight_bit = 'Invlid input.'
+                twelve_bit = 'Try again.'
 
-            window['output_1'].update(EIGHT_BIT)
-            window['output_2'].update(TWELVE_BIT)
+            window['output_1'].update(eight_bit)
+            window['output_2'].update(twelve_bit)
 
         else:
             break
