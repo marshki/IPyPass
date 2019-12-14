@@ -9,7 +9,8 @@ sg.change_look_and_feel('Reddit')
 
 LAYOUT = [[sg.Txt('Enter IP address:')],
           [sg.In(size=(16, 1), key='IP_ADDRESS')],
-          [sg.Txt('', size=(16, 1), key='output')],
+          [sg.Txt('', size=(16, 1), key='output_1')],
+          [sg.Txt('', size=(16, 1), key='output_2')],
           [sg.Button('Convert', bind_return_key=True)]]
 
 window = sg.Window('IPyPass', LAYOUT)
@@ -28,10 +29,21 @@ while True:
                 return((SPLIT_ADDRESS[2] + '*' +
                         str(int(SPLIT_ADDRESS[3]) + 8)).ljust(8, '*'))
 
-            EIGHT_BIT = eight_bit_passwd()
-        except Exception as e:
-            EIGHT_BIT = 'Invalid input.'
+            def twelve_bit_passwd():
+                """Transform IP address to 12-bit password.
+                """
+                return((SPLIT_ADDRESS[2] + '*' +
+                        str(int(SPLIT_ADDRESS[3]) + 12) + '*' + SPLIT_ADDRESS[1]).ljust(12, '*'))
 
-        window['output'].update(EIGHT_BIT)
+            EIGHT_BIT = eight_bit_passwd()
+            TWELVE_BIT = twelve_bit_passwd()
+
+        except Exception as e:
+            EIGHT_BIT = 'Invlid input.'
+            TWELVE_BIT = 'Try again.'
+
+        window['output_1'].update(EIGHT_BIT)
+        window['output_2'].update(TWELVE_BIT)
+
     else:
         break
