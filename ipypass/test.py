@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#pylint: disable=C0103
 
 """Take IPv4 address and return 8-bit or 12-bit password.
 """
