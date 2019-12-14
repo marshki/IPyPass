@@ -4,6 +4,7 @@
 """Take IPv4 address and return 8-bit or 12-bit password.
 """
 
+import logging
 import PySimpleGUI as sg
 
 sg.change_look_and_feel('Reddit')
@@ -45,6 +46,8 @@ def ipypass():
                 twelve_bit = twelve_bit_passwd()
 
             except Exception as e:
+                logging.exception(e)
+
                 eight_bit = 'Invlid input.'
                 twelve_bit = 'Try again.'
 
