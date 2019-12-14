@@ -13,14 +13,14 @@ LAYOUT = [[sg.Txt('Enter IP address:')],
           [sg.Txt('', size=(16, 1), key='output_2')],
           [sg.Button('Convert', bind_return_key=True)]]
 
-window = sg.Window('IPyPass', LAYOUT)
+Window = sg.Window('IPyPass', LAYOUT)
 
 def ipypass():
     """Guts.
     """
 
     while True:
-        event, values = window.read()
+        event, values = Window.read()
 
         if event is not None:
             try:
@@ -47,8 +47,8 @@ def ipypass():
                 eight_bit = 'Invlid input.'
                 twelve_bit = 'Try again.'
 
-            window['output_1'].update(eight_bit)
-            window['output_2'].update(twelve_bit)
+            Window['output_1'].update(eight_bit)
+            Window['output_2'].update(twelve_bit)
 
         else:
             break
