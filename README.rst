@@ -17,6 +17,9 @@ IPyPass
 .. image:: https://badges.frapsoft.com/os/v3/open-source.svg?v=103
    :target: https://github.com/ellerbrock/open-source-badges/
 
+.. image:: https://github.com/marshki/IPyPass/blob/master/docs/IPyPass.png
+
+
 IP-based password generator
 ---------------------------
 Python3 utility for converting IPv4 IP address to an 8- or 12-bit password.
