@@ -47,10 +47,10 @@ For example:
 
 .. csv-table:: IPyPass
    :header: "IP address", "8-bit password", "12-bit password"
-   :widths: 20, 20, 10
+   :widths: 10, 10, 10
 
-   "192.168.1.1", "1*9****", "1*13*168****"
    "10.1.1.1", "1*9*****", "1*13*1******"
+   "192.168.1.1", "1*9****", "1*13*168****"
 
 Change Log
 ----------
