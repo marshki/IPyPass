@@ -28,7 +28,7 @@ Requirements
 ------------
 Install required packages: 
 ::
-    requirements.txt
+    pip3 install -r requirements.txt
 
 Usage
 -----
