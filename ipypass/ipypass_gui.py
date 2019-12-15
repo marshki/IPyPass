@@ -2,7 +2,7 @@
 #pylint: disable=C0103
 #pylint: disable=W0703
 
-"""Take IPv4 address and return 8-bit or 12-bit password.
+"""Take IPv4 address and return 8- or 12-bit password.
 """
 
 import logging
@@ -19,7 +19,7 @@ LAYOUT = [[sg.Txt('Enter IP address:')],
 Window = sg.Window('IPyPass', LAYOUT)
 
 def ipypass():
-    """Take IP address, split by octet, then generate 8-bit or 12-bit password.
+    """Take IP address, split by octet, then generate 8- or 12-bit password.
     """
 
     while True:
@@ -46,8 +46,8 @@ def ipypass():
                 eight_bit = eight_bit_passwd()
                 twelve_bit = twelve_bit_passwd()
 
-            except Exception as ex:
-                logging.exception(ex)
+            except Exception as e:
+                logging.exception(e)
 
                 eight_bit = 'Invlid input.'
                 twelve_bit = 'Try again.'
