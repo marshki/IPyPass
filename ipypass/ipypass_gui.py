@@ -2,7 +2,7 @@
 #pylint: disable=C0103
 #pylint: disable=W0703
 
-"""Take IPv4 address and return 8- or 12-bit password.
+"""Take IPv4 address and return 8- or 12-bit password (GUI).
 """
 
 import logging
