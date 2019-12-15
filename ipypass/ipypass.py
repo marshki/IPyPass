@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Take IPv4 addresss and return 8- or 12-bit password.
+"""Take IPv4 addresss and return 8- or 12-bit password (CLI).
 """
 
 import ipaddress
