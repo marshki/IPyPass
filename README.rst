@@ -17,11 +17,34 @@ IPyPass
 .. image:: https://badges.frapsoft.com/os/v3/open-source.svg?v=103
    :target: https://github.com/ellerbrock/open-source-badges/
 
+
 IP-based password generator
 ---------------------------
 Python3 utility for converting IPv4 IP address to an 8- or 12-bit password.
 
 .. image:: https://github.com/marshki/IPyPass/blob/master/docs/IPyPass.png
+https://github.com/marshki/IPyPass/blob/master/docs/IPyPass.png
+
+Requirements
+------------
+
+
+Usage
+-----
+From a shell: 
+::
+    python3 ipypass.py
+
+At prompt, enter IPv4 address. Program will: 
+
+* validate address
+* split address by '.'
+* take 3rd octet and append `*`
+* take 4th octet then add 8 or 12 and append `*`
+  such that the string is 8 or 12 characters in length. 
+
+Change Log
+----------
 
 License
 -------
