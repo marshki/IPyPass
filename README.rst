@@ -43,6 +43,15 @@ At prompt, enter IPv4 address. Program will:
 * take 4th octet then add 8 or 12 and append `*`
   such that the string is 8 or 12 characters in length. 
 
+For example: 
+
+.. csv-table:: IPyPass
+   :header: "IP address", "8-bit password", "12-bit password"
+   :widths: 20, 20, 10
+
+   "192.168.1.1", "1*9****", "1*13*168****"
+   "10.1.1.1", "1*9*****", "1*13*1******"
+
 Change Log
 ----------
 
