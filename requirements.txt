@@ -1,1 +1,1 @@
-#PySimpleGUI version
+PySimpleGUI
