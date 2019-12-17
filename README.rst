@@ -56,6 +56,8 @@ For example:
 Change Log
 ----------
 
+.. CHANGELOG: https://github.com/marshki/IPyPass/blob/master/CHANGES.rst
+
 License
 -------
 LICENSE_
