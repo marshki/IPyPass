@@ -8,6 +8,9 @@ IPyPass
 .. image:: https://api.codacy.com/project/badge/Grade/abec29ce4acc44b299628499dc55e632    
     :target: https://www.codacy.com/manual/marshki/IPyPass?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marshki/IPyPass&amp;utm_campaign=Badge_Grade
 
+.. image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
+   :target: https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity
+
 .. image:: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
    :target: https://www.python.org/
 
