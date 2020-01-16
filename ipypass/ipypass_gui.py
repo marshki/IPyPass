@@ -19,7 +19,9 @@ LAYOUT = [[sg.Txt('Enter IP address:')],
 Window = sg.Window('IPyPass', LAYOUT)
 
 def ipypass():
-    """Take IP address, split by octet, then generate 8- or 12-bit password.
+    """Transform IPv4 address to 8- or 12-bit password.
+    Args: IPv4 address of the form: 0.0.0.0
+    Returns: 8- and 12-bit passwords.
     """
 
     while True:
@@ -32,12 +34,16 @@ def ipypass():
 
                 def eight_bit_passwd():
                     """Transform IP address to 8-bit password.
+                    Args: String-converted IPv4 address, split by octet.
+                    Returns: 8-bit password.
                     """
                     return((split_address[2] + '*' +
                             str(int(split_address[3]) + 8)).ljust(8, '*'))
 
                 def twelve_bit_passwd():
                     """Transform IP address to 12-bit password.
+                    Args: String-converted IPv4 address, split by octet.
+                    Returns: 12-bit password.
                     """
                     return((split_address[2] + '*' +
                             str(int(split_address[3]) + 12) + '*'
