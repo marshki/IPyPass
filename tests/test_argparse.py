@@ -17,6 +17,6 @@ def parse_cli_args():
     """
 
     parser = argparse.ArgumentParser(description="IPv4 address of interest.")
-    parser.add_argument("--ip", help="IP address of interest, e.g. 128.122.112.10", type=str)
+    parser.add_argument("--ip", type=str, help="IP address of interest, e.g. 128.122.112.10")
     args = parser.parse_args()
     return args()
