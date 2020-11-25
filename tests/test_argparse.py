@@ -24,5 +24,8 @@ def parse_cli_args():
     return args
 
 if __name__ == '__main__':
-    arguments = parse_cli_args()
-    print(arguments.ip)
+    args = parse_cli_args()
+    print(args.ip)
+
+
+# TODO: Add unit test. Fix linter issues.
