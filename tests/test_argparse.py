@@ -17,11 +17,12 @@ def parse_cli_args():
     """
 
     parser = argparse.ArgumentParser(description="IPv4 address of interest.")
-    parser.add_argument("--ip", action="store", type=str, help="IP address of interest, e.g. 128.122.112.10")
+    parser.add_argument("--ip", action="store", type=str,\
+                        help="IP address of interest, e.g. 128.122.112.10")
     args = parser.parse_args()
 
     return args
 
 if __name__ == '__main__':
-    args = parse_cli_args()
-    print(args.ip)
+    arguments = parse_cli_args()
+    print(arguments.ip)
