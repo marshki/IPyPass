@@ -22,8 +22,6 @@ def parse_cli_args():
 
     return args
 
-#print(args.ip)
-
 if __name__ == '__main__':
     args = parse_cli_args()
     print(args.ip)
