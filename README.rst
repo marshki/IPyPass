@@ -67,3 +67,8 @@ License
 LICENSE_
 
 .. _LICENSE: https://github.com/marshki/IPyPass/blob/master/LICENSE.txt
+
+
+.. image:: https://api.codacy.com/project/badge/Grade/d380a97f52454eb4811d7ce6e8d6f568
+   :alt: Codacy Badge
+   :target: https://app.codacy.com/gh/marshki/IPyPass?utm_source=github.com&utm_medium=referral&utm_content=marshki/IPyPass&utm_campaign=Badge_Grade
