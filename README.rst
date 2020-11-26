@@ -5,8 +5,9 @@ IPyPass
 .. image:: https://travis-ci.org/marshki/IPyPass.svg?branch=master
     :target: https://travis-ci.org/marshki/IPyPass
 
+.. image:: https://app.codacy.com/project/badge/Grade/bd0bef504604497da04a41b58f09a44e    :target: https://www.codacy.com/gh/marshki/IPyPass/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marshki/IPyPass&amp;utm_campaign=Badge_Grade
+
 .. image:: https://api.codacy.com/project/badge/Grade/abec29ce4acc44b299628499dc55e632    
-    :target: https://www.codacy.com/manual/marshki/IPyPass?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marshki/IPyPass&amp;utm_campaign=Badge_Grade
 
 .. image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
    :target: https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity
