@@ -25,6 +25,7 @@ def eight_bit_passwd():
 
     Args: String-converted IPv4 address, split by octet.
     Returns: 8-bit password.
+    
     """
     return((SPLIT_ADDRESS[2] + '*' +
             str(int(SPLIT_ADDRESS[3]) + 8)).ljust(8, '*'))
@@ -35,7 +36,7 @@ def twelve_bit_passwd():
 
     Args: String-converted IPv4 address, split by octet.
     Returns: 12-bit password.
-    
+
     """
     return((SPLIT_ADDRESS[2] + '*' +
             str(int(SPLIT_ADDRESS[3]) + 12) + '*' + SPLIT_ADDRESS[1]).ljust(12, '*'))
