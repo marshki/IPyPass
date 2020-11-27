@@ -11,7 +11,7 @@ def ipv4_addr_check():
     Args: IPv4 address of the form: 0.0.0.0
     Returns: String-converted IPv4 address.
     Raises: ValueError.
-    
+
     """
     while True:
         try:
@@ -30,13 +30,13 @@ def eight_bit_passwd():
             str(int(SPLIT_ADDRESS[3]) + 8)).ljust(8, '*'))
 
 def twelve_bit_passwd():
-    """Transform IP address to 12-bit password.
+    """
+    Transform IP address to 12-bit password.
 
     Args: String-converted IPv4 address, split by octet.
     Returns: 12-bit password.
     
     """
-
     return((SPLIT_ADDRESS[2] + '*' +
             str(int(SPLIT_ADDRESS[3]) + 12) + '*' + SPLIT_ADDRESS[1]).ljust(12, '*'))
 
