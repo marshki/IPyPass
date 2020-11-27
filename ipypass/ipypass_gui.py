@@ -23,7 +23,6 @@ def ipypass():
     Args: IPv4 address of the form: 0.0.0.0
     Returns: 8- and 12-bit passwords.
     """
-
     while True:
         event, values = Window.read()
 
