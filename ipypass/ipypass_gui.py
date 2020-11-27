@@ -2,8 +2,7 @@
 #pylint: disable=C0103
 #pylint: disable=W0703
 
-"""Take IPv4 address and return 8- or 12-bit password (GUI).
-"""
+"""Take IPv4 address and return 8- or 12-bit password (GUI)."""
 
 import logging
 import PySimpleGUI as sg
@@ -20,6 +19,7 @@ Window = sg.Window('IPyPass', LAYOUT)
 
 def ipypass():
     """Transform IPv4 address to 8- or 12-bit password.
+
     Args: IPv4 address of the form: 0.0.0.0
     Returns: 8- and 12-bit passwords.
     """
@@ -34,6 +34,7 @@ def ipypass():
 
                 def eight_bit_passwd():
                     """Transform IP address to 8-bit password.
+
                     Args: String-converted IPv4 address, split by octet.
                     Returns: 8-bit password.
                     """
@@ -42,6 +43,7 @@ def ipypass():
 
                 def twelve_bit_passwd():
                     """Transform IP address to 12-bit password.
+
                     Args: String-converted IPv4 address, split by octet.
                     Returns: 12-bit password.
                     """
