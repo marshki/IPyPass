@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-"""Convert IPv4 address to 8- or 12-bit password.
+"""
+Convert IPv4 address to 8- or 12-bit password.
 
 8-bit algorithm:
 Take 4-octet IPv4 address -->
