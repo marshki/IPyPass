@@ -32,8 +32,7 @@ def ipypass():
                 split_address = ip_address.split('.', 4)
 
                 def eight_bit_passwd():
-                    """
-                    Transform IP address to 8-bit password.
+                    """Transform IP address to 8-bit password.
 
                     Args: String-converted IPv4 address, split by octet.
                     Returns: 8-bit password.
@@ -42,8 +41,7 @@ def ipypass():
                             str(int(split_address[3]) + 8)).ljust(8, '*'))
 
                 def twelve_bit_passwd():
-                    """
-                    Transform IP address to 12-bit password.
+                    """Transform IP address to 12-bit password.
 
                     Args: String-converted IPv4 address, split by octet.
                     Returns: 12-bit password.
