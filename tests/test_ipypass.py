@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-"""
-Convert IPv4 address to 8- or 12-bit password.
+"""Convert IPv4 address to 8- or 12-bit password.
 
 8-bit algorithm:
 Take 4-octet IPv4 address -->
@@ -38,6 +37,7 @@ def twelve_bit_passwd():
             str(int(SPLIT_ADDRESS[3]) + 12) + '*' + SPLIT_ADDRESS[1]).ljust(12, '*'))
 
 class SplitIPTest(unittest.TestCase):
+
     """Unit tests."""
 
     def test_eight_bit_passwd_01(self):
@@ -50,8 +50,7 @@ class SplitIPTest(unittest.TestCase):
         self.assertEqual(eight_bit_passwd(), '1*13*168****')
 
     def test_twelve_bit_passwd_01(self):
-        """Valid return value.
-        """
+        """Valid return value."""
         self.assertEqual(twelve_bit_passwd(), '1*13*168****')
 
     @unittest.expectedFailure
