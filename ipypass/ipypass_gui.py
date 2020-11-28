@@ -18,8 +18,7 @@ LAYOUT = [[sg.Txt('Enter IP address:')],
 Window = sg.Window('IPyPass', LAYOUT)
 
 def ipypass():
-    """
-    Transform IPv4 address to 8- or 12-bit password.
+    """Transform IPv4 address to 8- or 12-bit password.
 
     Args: IPv4 address of the form: 0.0.0.0
     Returns: 8- and 12-bit passwords.
