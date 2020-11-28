@@ -10,6 +10,7 @@ def ipv4_addr_check():
     Args: IPv4 address of the form: 0.0.0.0
     Returns: String-converted IPv4 address.
     Raises: ValueError.
+
     """
     while True:
         try:
