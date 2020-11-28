@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 # pylint: disable=W0613,W0622
 
-"""
-IPv4 validation using `ipaddress` module.
+"""IPv4 validation using `ipaddress` module."""
 
-A ValueError is raised if address does not represent a valid IPv4.
+"""A ValueError is raised if address does not represent a valid IPv4.
 For reference: https://docs.python.org/3/library/ipaddress.html
 """
 
@@ -23,8 +22,8 @@ def ipv4_addr_check():
             raise
 
 class IPv4AddrCheckTest(unittest.TestCase):
-    """Unit tests.
-    Use `patch()` to mock objects for testing.
+    """Unit tests."""
+    """Use `patch()` to mock objects for testing.
     For reference: https://docs.python.org/3/library/unittest.mock.html
     """
     @patch('builtins.input', return_value='192.168.1.1')
