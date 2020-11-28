@@ -5,8 +5,7 @@
 import ipaddress
 
 def ipv4_addr_check():
-    """
-    Validate IPv4 address.
+    """Validate IPv4 address.
 
     Args: IPv4 address of the form: 0.0.0.0
     Returns: String-converted IPv4 address.
