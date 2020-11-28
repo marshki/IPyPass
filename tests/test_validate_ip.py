@@ -3,10 +3,6 @@
 
 """IPv4 validation using `ipaddress` module."""
 
-"""A ValueError is raised if address does not represent a valid IPv4.
-For reference: https://docs.python.org/3/library/ipaddress.html
-"""
-
 import ipaddress
 import unittest
 
@@ -23,9 +19,6 @@ def ipv4_addr_check():
 
 class IPv4AddrCheckTest(unittest.TestCase):
     """Unit tests."""
-    """Use `patch()` to mock objects for testing.
-    For reference: https://docs.python.org/3/library/unittest.mock.html
-    """
     @patch('builtins.input', return_value='192.168.1.1')
     def test_ipv4_addr_check_01(self, input):
         """Valid return value."""
