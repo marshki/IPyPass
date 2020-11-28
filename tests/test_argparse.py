@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+#pylint: disable=W0141
 
-"""Argparser.
-"""
+"""Argparser."""
 
 import argparse
 import unittest
@@ -17,6 +16,7 @@ def parse_cli_args():
 
     Returns:
       String, stripped of whitespace, e.g. 128.122.112.10
+
     """
 
     parser = argparse.ArgumentParser(description="IPv4 address of interest.")
@@ -35,8 +35,7 @@ class ParseCLITest(unittest.TestCase):
 
     @patch('builtins.input', return_value='--ip 192.168.1.1')
     def test_parse_cli_args_01(self, input):
-        """Valid return value.
-        """
+        """Valid return value."""
         self.assertEqual(parse_cli_args(), '192.168.1.1')
 
 if __name__ == '__main__':
