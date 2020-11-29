@@ -2,11 +2,6 @@
 
 """Take IPv4 addresss and return 8- or 12-bit password (CLI)."""
 
-# TODO: Add exception handling for parse_cli_args(),
-# e.g.: https://riptutorial.com/python/example/6908/custom-parser-error-message-with-argparse
-# TODO: Argparse unit test
-# TODO: Fix linter errors
-
 import ipaddress
 import argparse
 
