@@ -2,7 +2,8 @@
 
 """Take IPv4 addresss and return 8- or 12-bit password (CLI)."""
 
-# TODO: Add exception handling for parse_cli_args()
+# TODO: Add exception handling for parse_cli_args(),
+# e.g.: https://riptutorial.com/python/example/6908/custom-parser-error-message-with-argparse
 # TODO: Argparse unit test
 # TODO: Fix linter errors
 
@@ -61,8 +62,12 @@ def twelve_bit_passwd():
     return((SPLIT_ADDRESS[2] + '*' +
             str(int(SPLIT_ADDRESS[3]) + 12) + '*' + SPLIT_ADDRESS[1]).ljust(12, '*'))
 
-def create_crude_table():
-    """Create a crude table."""
+def create_table():
+    """Create a crude table.
+
+    Returns: Crude table.
+
+    """
 
     print('8-bit   ', '12-bit     ')
     print('--------', '------------')
@@ -74,8 +79,8 @@ if __name__ == '__main__':
     if args.ip:
         ADDRESS = args.ip
         SPLIT_ADDRESS = ADDRESS.split('.', 4)
-        create_crude_table()
+        create_table()
     else:
         ADDRESS = ipv4_addr_check()
         SPLIT_ADDRESS = ADDRESS.split('.', 4)
-        create_crude_table()
+        create_table()
