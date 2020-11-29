@@ -65,7 +65,7 @@ def twelve_bit_passwd():
 def create_table():
     """Create a crude table.
 
-    Returns: Crude table.
+    Returns: Table with transformed output.
 
     """
 
