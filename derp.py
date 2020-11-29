@@ -13,6 +13,7 @@ def parse_cli_args():
 
     Returns:
       String, e.g. 0.0.0.0
+
     """
 
     parser = argparse.ArgumentParser(description="IPv4 address of interest.")
@@ -57,8 +58,8 @@ def twelve_bit_passwd():
             str(int(SPLIT_ADDRESS[3]) + 12) + '*' + SPLIT_ADDRESS[1]).ljust(12, '*'))
 
 def create_crude_table():
-    """Create a crude table.
-    """
+    """Create a crude table."""
+
     print('8-bit   ', '12-bit     ')
     print('--------', '------------')
     print(eight_bit_passwd(), twelve_bit_passwd())
