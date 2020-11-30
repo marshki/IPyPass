@@ -1,6 +1,7 @@
-- [ ] Add exception handling for parse_cli_args(),
-      e.g.: https://riptutorial.com/python/example/6908/custom-parser-error-message-with-argparse
+  - [x] Integrate argparser.
 
-- [ ] Argparse unit test
+  - [ ] Add exception handling for `parse_cli_args()`.
 
-- [ ] Fix linter errors
+  - [ ] Argparse unit test.
+
+  - [ ] Fix linter errors.
