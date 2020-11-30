@@ -19,6 +19,9 @@ def parse_cli_args():
                         help="IP address of interest, e.g. 0.0.0.0")
     args = parser.parse_args()
 
+    if args.ip is None:
+        parser.error("--ip requires an IPv4 adddress. None specified.")
+
     return args
 
 def ipv4_addr_check():
