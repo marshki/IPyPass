@@ -9,11 +9,8 @@ def parse_cli_args():
     """
     Command line parser for subnet of interest.
 
-    Args:
-      - IPv4 address, e.g. 0.0.0.0
-
-    Returns:
-      - String, e.g. 0.0.0.0
+    Args: IPv4 address, e.g. 0.0.0.0
+    Returns: String, e.g. 0.0.0.0
 
     """
 
