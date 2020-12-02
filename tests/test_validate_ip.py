@@ -18,6 +18,7 @@ def ipv4_addr_check():
             raise
 
 class IPv4AddrCheckTest(unittest.TestCase):
+    
     """Unit tests."""
 
     @patch('builtins.input', return_value='192.168.1.1')
