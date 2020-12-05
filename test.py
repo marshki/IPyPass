@@ -21,6 +21,10 @@ def parse_cli_args():
     if args.ip is None:
         parser.error("--ip requires an IPv4 adddress. None specified.")
 
+    #if args.ip is 
+    # https://docs.python.org/3/library/argparse.html#action-classes
+    # Invalid arguments may be the way to filter out Index, and type errors? 
+
     return args
 
 if __name__ == '__main__':
