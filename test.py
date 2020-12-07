@@ -32,7 +32,7 @@ class ParserTest(unittest.TestCase):
 
     def test_IP(self):
         parser = self.parser.parse_args(['--ip ', '192.168.1.1'])
-        self.assertEqual(parsed.something, '192.168.1.1')
+        self.assertEqual(parser_cli_args(), '192.168.1.1')
 
 if __name__ == '__main__':
     #args = parse_cli_args()
