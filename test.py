@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+from ipaddress import ip_address
 
 def parse_cli_args():
     """Command line parser for subnet of interest.
@@ -14,16 +15,10 @@ def parse_cli_args():
     """
 
     parser = argparse.ArgumentParser(description="IPv4 address of interest.")
-    parser.add_argument("--ip", action="store", type=str,\
+    parser.add_argument("--ip", action="store", type=ip_address,\
+                        required=True,\
                         help="IP address of interest, e.g. 0.0.0.0")
     args = parser.parse_args()
-
-    if args.ip is None:
-        parser.error("--ip requires an IPv4 adddress. None specified.")
-
-    #if args.ip is 
-    # https://docs.python.org/3/library/argparse.html#action-classes
-    # Invalid arguments may be the way to filter out Index, and type errors? 
 
     return args
 
