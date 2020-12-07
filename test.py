@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 
 import argparse
+import unittest
+
 from ipaddress import ip_address
+from unittest.mock import patch
 
 def parse_cli_args():
-    """Command line parser for subnet of interest.
+    """
+    Command line parser for subnet of interest.
 
     Args:
       IPv4 address.
@@ -22,6 +26,15 @@ def parse_cli_args():
 
     return args
 
+class ParserTest(unittest.TestCase):
+    def setUp(self):
+        self.parser = parser_cli_args()
+
+    def test_IP(self):
+        parser = self.parser.parse_args(['--ip ', '192.168.1.1'])
+        self.assertEqual(parsed.something, '192.168.1.1')
+
 if __name__ == '__main__':
-    args = parse_cli_args()
-    print(args.ip)
+    #args = parse_cli_args()
+    #print(args.ip)
+    unittest.main()
