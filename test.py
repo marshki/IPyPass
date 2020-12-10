@@ -5,9 +5,6 @@
 import argparse
 from ipaddress import ip_address
 
-import unittest
-from unittest.mock import patch
-
 def parse_cli_args():
     """
     Command line parser for subnet of interest.
@@ -16,7 +13,7 @@ def parse_cli_args():
       --ip 0.0.0.0
 
     Returns:
-     	 String, e.g. 0.0.0.0
+      String, e.g. 0.0.0.0
 
     """
 
