@@ -16,7 +16,7 @@ def parse_cli_args():
       --ip 0.0.0.0
 
     Returns:
-      String, e.g. 0.0.0.0
+     	 String, e.g. 0.0.0.0
 
     """
 
@@ -29,23 +29,6 @@ def parse_cli_args():
 
     return args
 
-class ParseCLIArgsTest(unittest.TestCase):
-
-    """
-
-    Unit tests.
-    """
-
-    #def setUp(self):
-    #    self.parser = parser_cli_args()
-
-    @patch('builtins.input', return_value='192.168.1.1')
-    def test_parse_cli_args(self, input):
-        """Valid return value."""
-        args = parse_cli_args(['--ip ', '192.168.1.1'])
-        self.assertIsInstance(parser_cli_args(), '192.168.1.1')
-
 if __name__ == '__main__':
-    #args = parse_cli_args()
-    #print(args.ip)
-    unittest.main()
+    args = parse_cli_args()
+    print(args.ip)
