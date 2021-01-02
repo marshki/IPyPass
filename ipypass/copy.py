@@ -3,7 +3,6 @@
 """Take IPv4 addresss and return 8-bit, 12-bit passwords."""
 
 import ipaddress
-import argparse
 
 def ipv4_addr_check():
     """
