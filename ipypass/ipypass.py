@@ -16,11 +16,9 @@ def parse_cli_args():
 
     parser = argparse.ArgumentParser(description="IPv4 address of interest.")
     parser.add_argument("--ip", action="store", type=str,\
+                        required=False,\
                         help="IP address of interest, e.g. 0.0.0.0")
     args = parser.parse_args()
-
-    if args.ip is None:
-        parser.error("--ip requires an IPv4 adddress. None specified.")
 
     return args
 
