@@ -25,7 +25,6 @@ def parse_cli_args():
 class ParseCLIArgs(unittest.TestCase):
 
     """
-
     Unit tests.
     """
     def setUp(self):
