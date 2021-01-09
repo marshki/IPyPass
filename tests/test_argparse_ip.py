@@ -3,7 +3,6 @@
 """IPv4 validation using `ipaddress module` and argparse."""
 
 import argparse
-from ipaddress import ip_address
 
 import unittest
 
@@ -17,7 +16,7 @@ def parse_cli_args():
     """
 
     parser = argparse.ArgumentParser(description="IPv4 address of interest.")
-    parser.add_argument("--ip", action="store",\
+    parser.add_argument("--ip", action="store", type=str,\
                         required=True,\
                         help="IP address of interest, e.g. 0.0.0.0")
 
@@ -25,10 +24,15 @@ def parse_cli_args():
 
 class ParseCLIArgs(unittest.TestCase):
 
+    """
+
+    Unit tests.
+    """
     def setUp(self):
         self.parser = parse_cli_args()
 
     def test_parser_cli_args(self):
+        """Valid return value."""
         parsed = self.parser.parse_args(['--ip', '192.168.1.1'])
         self.assertEqual(parsed.ip, '192.168.1.1')
 
