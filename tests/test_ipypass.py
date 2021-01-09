@@ -40,7 +40,6 @@ def twelve_bit_passwd():
 class SplitIPTest(unittest.TestCase):
 
     """
-
     Unit tests.
     """
 
