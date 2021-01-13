@@ -30,10 +30,15 @@ class ParseCLIArgs(unittest.TestCase):
     def setUp(self):
         self.parser = parse_cli_args()
 
-    def test_parser_cli_args(self):
+    def test_parser_cli_args_01(self):
         """Valid return value."""
         parsed = self.parser.parse_args(['--ip', '192.168.1.1'])
         self.assertEqual(parsed.ip, '192.168.1.1')
+
+    def test_parser_cli_args_02(self):
+        """Valid return value."""
+        parsed = self.parser.parse_args(['--ip', '10.0.0.1'])
+        self.assertEqual(parsed.ip, '10.0.0.1')
 
 if __name__ == '__main__':
     unittest.main()
