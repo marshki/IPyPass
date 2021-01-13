@@ -35,11 +35,15 @@ Install required packages:
 
 Usage
 -----
-From a shell: 
+From a shell (argument parser):
 ::
-    python3 ipypass.py
+    python ipypass.py --ip 192.168.1.1 
 
-At prompt, enter IPv4 address. Program will: 
+From a shell (interactive): 
+::
+    python ipypass.py
+
+then, at prompt, enter IPv4 address. Program will: 
 
 * validate address
 * split address by '.'
