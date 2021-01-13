@@ -2,20 +2,22 @@
 
 """Take IPv4 addresss and return 8-bit, 12-bit passwords."""
 
-import ipaddress
 import argparse
+import ipaddress
+
+from ipaddress import ip_address
 
 def parse_cli_args():
     """
-    Command line parser for IPv4 address of interest.
+    Command line parser for IPv4 address of interest, with validation.
 
     Args: IPv4 address, e.g.: --ip 0.0.0.0
-    Returns: String, e.g.: 0.0.0.0
-
+    Returns: IPv4 address, e.g.: 0.0.0.0
+    Raises: error: argument --ip: invalid ip_address value: 'derp'
     """
 
     parser = argparse.ArgumentParser(description="IPv4 address of interest.")
-    parser.add_argument("--ip", action="store", type=str,\
+    parser.add_argument("--ip", action="store", type=ip_address,\
                         required=False,\
                         help="IP address of interest, e.g. 0.0.0.0")
     args = parser.parse_args()
@@ -75,7 +77,7 @@ if __name__ == '__main__':
     args = parse_cli_args()
 
     if args.ip:
-        ADDRESS = args.ip
+        ADDRESS = str(args.ip)
         SPLIT_ADDRESS = ADDRESS.split('.', 4)
         create_table()
     else:
