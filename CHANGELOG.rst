@@ -1,8 +1,10 @@
 -------------------
 IPyPass Changes Log
 -------------------
-
+v.0.4 04-SEPT-2021
 1.0.0 
-    * 12.16.2019 -- Initial release.
+    * 2019-DEC-16 -- Initial release.
 1.1.0
-    * 12.16.2020 -- GUI added.
+    * 2020-DEC-16 -- GUI added.
+1.1.1
+    * 2021-JAN-13 -- ArgParse added.
