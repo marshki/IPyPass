@@ -1,3 +1,3 @@
-For reference, lookie [here](https://sphinxemojicodes.readthedocs.io/en/stable/#supported-codes).
+.. lookie _here: https://sphinxemojicodes.readthedocs.io/en/stable/#supported-codes)
 
 This text includes a smiley face |:smile:| and a snake too! |:snake:|
