@@ -7,8 +7,6 @@ import ipaddress
 import logging
 import PySimpleGUI as sg
 
-from ipaddress import ip_address
-
 sg.change_look_and_feel('Reddit')
 
 LAYOUT = [[sg.Txt('Enter IP address:')],
