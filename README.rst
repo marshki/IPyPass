@@ -2,9 +2,9 @@
 IPyPass
 =======
 
-.. image:: https://travis-ci.org/marshki/IPyPass.svg?branch=master
-    :target: https://travis-ci.org/marshki/IPyPass
-
+.. image:: https://app.travis-ci.com/marshki/IPyPass.svg?branch=master
+    :target: https://app.travis-ci.com/marshki/IPyPass
+   
 .. image:: https://app.codacy.com/project/badge/Grade/bd0bef504604497da04a41b58f09a44e    
    :target: https://www.codacy.com/gh/marshki/IPyPass/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marshki/IPyPass&amp;utm_campaign=Badge_Grade
 
