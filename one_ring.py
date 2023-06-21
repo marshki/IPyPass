@@ -17,7 +17,6 @@ LAYOUT = [[sg.Txt('Enter IP address:')],
 
 Window = sg.Window('IPyPass', LAYOUT)
 
-
 def parse_cli_args():
     """
     Command line parser for IPv4 address of interest, with validation.
