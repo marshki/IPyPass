@@ -6,6 +6,9 @@ import argparse
 import ipaddress
 import unittest
 
+from io import StringIO
+from contextlib import redirect_stdout
+
 from ipaddress import IPv4Address
 from unittest.mock import patch
 
@@ -67,6 +70,44 @@ def twelve_bit_passwd(split_address):
     return (split_address[2] + '*' +
             str(int(split_address[3]) + 12) + '*' +
             split_address[1]).ljust(12, '*')
+
+def ipypass():
+    """
+    Transform IPv4 address to 8- or 12-bit password (GUI).
+
+    Returns:
+        8- and 12-bit passwords.
+    """
+    while True:
+        event, values = Window.read()
+
+        if event == sg.WINDOW_CLOSED:
+            break
+
+        if event == 'Convert':
+            try:
+                ip_address = str(values['ip_address'])
+                address = ipaddress.IPv4Address(ip_address)
+                split_address = str(address).split('.')
+                eight_bit = eight_bit_passwd(split_address)
+                twelve_bit = twelve_bit_passwd(split_address)
+
+            except Exception as e:
+                logging.exception(e)
+                eight_bit = 'Invalid input.'
+                twelve_bit = 'Try again.'
+
+            Window['output_1'].update(eight_bit)
+            Window['output_2'].update(twelve_bit)
+
+
+if __name__ == '__main__':
+    args = parse_cli_args()
+
+    if args is not None:
+        create_table(args)
+    else:
+        ipypass()
 
 class IPyPassTests(unittest.TestCase):
     """Unit tests."""
