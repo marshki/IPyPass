@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Take IPv4 address and return 8- or 12-bit passwords (GUI and CLI)."""
+"""Take IPv4 address and return 8- or 12-bit passwords."""
 
 import argparse
 import ipaddress
@@ -16,6 +16,7 @@ LAYOUT = [[sg.Txt('Enter IP address:')],
           [sg.Button('Convert', bind_return_key=True)]]
 
 Window = sg.Window('IPyPass', LAYOUT)
+
 
 def parse_cli_args():
     """
@@ -35,7 +36,6 @@ def parse_cli_args():
     args = parser.parse_args()
 
     return args.ip
-
 
 def eight_bit_passwd(split_address):
     """
