@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
-import unittest
+"""""IPv4 validation using `ipaddress module` and argparse."""
+
 import argparse
 import ipaddress
+import unittest
+
 from ipaddress import IPv4Address
 from unittest.mock import patch
 
