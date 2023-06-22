@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""""IPv4 validation using `ipaddress module` and argparse."""
+"""IPv4 validation using `ipaddress module` and argparse."""
 
 import argparse
 import ipaddress
@@ -29,9 +29,7 @@ def parse_cli_args():
     return args.ip
 
 class IPyPassTests(unittest.TestCase):
-    """
-    Unit tests.
-    """
+    """Unit tests."""
 
     @patch('sys.argv', ['script_name', '--ip', '192.168.0.1'])
     def test_parse_cli_args(self):
