@@ -1,7 +1,7 @@
 from ipaddress import IPv4Address
 import unittest
-#from io import StringIO
-#from contextlib import redirect_stdout
+from io import StringIO
+from contextlib import redirect_stdout
 from ipaddress import IPv4Address
 from one_ring import parse_cli_args, eight_bit_passwd, twelve_bit_passwd, create_table
 
