@@ -1,7 +1,6 @@
 -------------------
 IPyPass Changes Log
 -------------------
-v.0.4 04-SEPT-2021
 1.0.0
     * 2019-DEC-16 -- Initial release.
 1.1.0
