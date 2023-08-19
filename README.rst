@@ -5,7 +5,7 @@ IPyPass
 .. image:: https://app.travis-ci.com/marshki/IPyPass.svg?branch=master
     :target: https://app.travis-ci.com/marshki/IPyPass
    
-.. image:: https://app.codacy.com/project/badge/Grade/bd0bef504604497da04a41b58f09a44e    
+.. image:: https://app.codacy.com/project/badge/Grade/bd0bef504604497da04a41b58f09a44e
    :target: https://www.codacy.com/gh/marshki/IPyPass/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marshki/IPyPass&amp;utm_campaign=Badge_Grade
 
 .. image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
@@ -29,7 +29,7 @@ Python3 utility (w/PySimpleGUI) for converting IPv4 IP address to an 8- or 12-bi
 
 Requirements
 ------------
-Install required packages: 
+Install required packages:
 ::
     pip3 install -r requirements.txt
 
@@ -37,11 +37,11 @@ Usage
 -----
 From a shell (argument parser):
 ::
-    python ipypass.py --ip 192.168.1.1 
+    python3 ipypass.py --ip 192.168.1.1
 
-From a shell (interactive): 
+From a shell (interactive):
 ::
-    python ipypass.py
+    python3 ipypass.py
 
 then, at prompt, enter IPv4 address. Program will: 
 
