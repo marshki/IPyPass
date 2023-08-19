@@ -1,12 +1,18 @@
-from ipaddress import IPv4Address
+#!/usr/bin/env python3
+
+"""Unit test class.
+"""
+
 import unittest
-#from io import StringIO
-#from contextlib import redirect_stdout
 from ipaddress import IPv4Address
+from io import StringIO
+from contextlib import redirect_stdout
 from one_ring import parse_cli_args, eight_bit_passwd, twelve_bit_passwd, create_table
 
-
 class IPyPassTests(unittest.TestCase):
+
+    """Unit tests.
+    """
 
     def test_parse_cli_args(self):
         # Test with valid IP address
@@ -19,7 +25,7 @@ class IPyPassTests(unittest.TestCase):
         args = []
         ip = parse_cli_args(args)
         self.assertIsNone(ip)
-"""
+
     def test_eight_bit_passwd(self):
         split_address = ['192', '168', '0', '1']
         password = eight_bit_passwd(split_address)
@@ -36,6 +42,6 @@ class IPyPassTests(unittest.TestCase):
         with redirect_stdout(StringIO()) as output:
             create_table(ip_address)
             self.assertEqual(output.getvalue(), expected_output)
-"""
+
 if __name__ == '__main__':
     unittest.main()
