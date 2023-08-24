@@ -23,7 +23,7 @@ IPyPass
 
 IP-based password generator
 ---------------------------
-Python3 utility (w/PySimpleGUI) for converting IPv4 IP address to an 8- or 12-bit password.
+Python3 |:snake:| utility (w/PySimpleGUI) for converting IPv4 IP address to an 8- or 12-bit password.
 
 .. image:: https://github.com/marshki/IPyPass/blob/master/docs/IPyPass.png
 
