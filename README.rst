@@ -1,24 +1,30 @@
 IPyPass :closed_lock_with_key:
 ========================================================================================
+|travis| |codacy| |maintained| |python| |mit| |open source|
 
-.. image:: https://app.travis-ci.com/marshki/IPyPass.svg?branch=master
+.. |travis| image:: https://app.travis-ci.com/marshki/IPyPass.svg?branch=master
     :target: https://app.travis-ci.com/marshki/IPyPass
-   
-.. image:: https://app.codacy.com/project/badge/Grade/bd0bef504604497da04a41b58f09a44e
+    :alt: Travis
+
+.. |codacy| image:: https://app.codacy.com/project/badge/Grade/bd0bef504604497da04a41b58f09a44e
    :target: https://www.codacy.com/gh/marshki/IPyPass/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marshki/IPyPass&amp;utm_campaign=Badge_Grade
+   :alt: Codacy
 
-.. image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
+.. |maintained| image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
    :target: https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity
+   :alt: Maintained
 
-.. image:: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
+.. |python| image:: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
    :target: https://www.python.org/
+   :alt: Python
 
-.. image:: https://img.shields.io/badge/License-MIT-blue.svg
+.. |mit| image:: https://img.shields.io/badge/License-MIT-blue.svg
    :target: https://lbesson.mit-license.org/
+   :alt: MIT
 
-.. image:: https://badges.frapsoft.com/os/v3/open-source.svg?v=103
+.. |open source| image:: https://badges.frapsoft.com/os/v3/open-source.svg?v=103
    :target: https://github.com/ellerbrock/open-source-badges/
-
+   :alt: Open Source
 
 IP-based password generator
 ---------------------------
