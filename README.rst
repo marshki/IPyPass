@@ -36,22 +36,23 @@ Modify the algo to suit your needs.
 Requirements
 ------------
 Install required packages:
-
-. code-block:: Python3
+.. code-block:: Python3
 
     pip3 install -r requirements.txt
 
 Usage
 -----
 From a shell (argument parser):
-::
+.. code-block:: Python3
+
     python3 ipypass.py --ip 192.168.1.1
 
 From a shell (interactive):
-::
+.. code-block:: Python3
+
     python3 ipypass.py
 
-then, at prompt, enter IPv4 address. Program will: 
+then, at prompt, enter IPv4 address. Program will:
 
 * validate address
 * split address by '.'
