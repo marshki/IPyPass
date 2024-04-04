@@ -1,6 +1,5 @@
-========
 IPyPass :closed_lock_with_key:
-========
+========================================================================================
 
 .. image:: https://app.travis-ci.com/marshki/IPyPass.svg?branch=master
     :target: https://app.travis-ci.com/marshki/IPyPass
