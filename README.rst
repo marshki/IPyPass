@@ -36,7 +36,9 @@ Modify the algo to suit your needs.
 Requirements
 ------------
 Install required packages:
-::
+
+. code-block:: Python3
+
     pip3 install -r requirements.txt
 
 Usage
