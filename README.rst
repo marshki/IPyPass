@@ -36,6 +36,7 @@ Modify the algo to suit your needs.
 Requirements
 ------------
 Install required packages:
+
 .. code-block:: Python3
 
     pip3 install -r requirements.txt
@@ -43,11 +44,13 @@ Install required packages:
 Usage
 -----
 From a shell (argument parser):
+
 .. code-block:: Python3
 
     python3 ipypass.py --ip 192.168.1.1
 
 From a shell (interactive):
+
 .. code-block:: Python3
 
     python3 ipypass.py
