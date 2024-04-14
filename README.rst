@@ -82,4 +82,4 @@ License
 -------
 LICENSE_
 
-.. _LICENSE: https://github.com/marshki/IPyPass/blob/master/LICENSE.txt
+.. _LICENSE: https://github.com/marshki/IPyPass/blob/master/LICENSE
