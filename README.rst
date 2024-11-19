@@ -28,7 +28,7 @@ IPyPass :closed_lock_with_key:
 
 IP-based password generator
 ---------------------------
-Python3 utility (w/PySimpleGUI) for converting IPv4 IP address to an 8- or 12-bit password.
+Python3 utility (w/Tkinter) for converting IPv4 IP address to an 8- or 12-bit password.
 Modify the algo to suit your needs.
 
 .. image:: https://github.com/marshki/IPyPass/blob/master/docs/IPyPass.png
