@@ -7,18 +7,19 @@ import ipaddress
 import logging
 import tkinter as tk
 from tkinter import messagebox
-# import PySimpleGUI as sg
+"""
+import PySimpleGUI as sg
 
-#sg.change_look_and_feel('Reddit')
+sg.change_look_and_feel('Reddit')
 
-#LAYOUT = [[sg.Txt('Enter IP address:')],
-#          [sg.In(size=(16, 1), key='ip_address')],
-#          [sg.Txt('', size=(16, 1), key='output_1')],
-#          [sg.Txt('', size=(16, 1), key='output_2')],
-#          [sg.Button('Convert', bind_return_key=True)]]
+LAYOUT = [[sg.Txt('Enter IP address:')],
+          [sg.In(size=(16, 1), key='ip_address')],
+          [sg.Txt('', size=(16, 1), key='output_1')],
+          [sg.Txt('', size=(16, 1), key='output_2')],
+          [sg.Button('Convert', bind_return_key=True)]]
 
-#Window = sg.Window('IPyPass', LAYOUT)
-
+Window = sg.Window('IPyPass', LAYOUT)
+"""
 def parse_cli_args(args=None):
     """
     Command line parser for IPv4 address of interest, with validation.
@@ -80,6 +81,7 @@ def create_table(ip_address):
     print('--------', '------------')
     print(eight_bit_passwd(split_address), twelve_bit_passwd(split_address))
 
+"""
 def ipypass():
     """
     Transform IPv4 address to 8- or 12-bit password (GUI).
@@ -108,6 +110,7 @@ def ipypass():
 
             Window['output_1'].update(eight_bit)
             Window['output_2'].update(twelve_bit)
+"""
 
 if __name__ == '__main__':
     args = parse_cli_args()
