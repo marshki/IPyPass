@@ -5,17 +5,19 @@
 import argparse
 import ipaddress
 import logging
-import PySimpleGUI as sg
+import tkinter as tk
+from tkinter import messagebox
+# import PySimpleGUI as sg
 
-sg.change_look_and_feel('Reddit')
+#sg.change_look_and_feel('Reddit')
 
-LAYOUT = [[sg.Txt('Enter IP address:')],
-          [sg.In(size=(16, 1), key='ip_address')],
-          [sg.Txt('', size=(16, 1), key='output_1')],
-          [sg.Txt('', size=(16, 1), key='output_2')],
-          [sg.Button('Convert', bind_return_key=True)]]
+#LAYOUT = [[sg.Txt('Enter IP address:')],
+#          [sg.In(size=(16, 1), key='ip_address')],
+#          [sg.Txt('', size=(16, 1), key='output_1')],
+#          [sg.Txt('', size=(16, 1), key='output_2')],
+#          [sg.Button('Convert', bind_return_key=True)]]
 
-Window = sg.Window('IPyPass', LAYOUT)
+#Window = sg.Window('IPyPass', LAYOUT)
 
 def parse_cli_args(args=None):
     """
