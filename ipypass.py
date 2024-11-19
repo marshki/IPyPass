@@ -6,7 +6,6 @@ import argparse
 import ipaddress
 import logging
 import tkinter as tk
-from tkinter import messagebox
 
 def parse_cli_args(args=None):
     """
