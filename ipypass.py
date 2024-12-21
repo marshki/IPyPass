@@ -81,7 +81,7 @@ def ipypass():
             split_address = str(address).split('.')
             eight_bit = eight_bit_passwd(split_address)
             twelve_bit = twelve_bit_passwd(split_address)
-        except Exception as e:
+        except ValueError as e:
             logging.exception(e)
             eight_bit = 'Invalid input.'
             twelve_bit = 'Try again.'
