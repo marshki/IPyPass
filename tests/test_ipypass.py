@@ -46,7 +46,7 @@ class IPyPassTests(unittest.TestCase):
         self.assertEqual(password, '0*13*168****')
 
     def test_create_table(self):
-        """Test talbe creation.
+        """Test table creation.
         """
         ip_address = IPv4Address('192.168.0.1')
         expected_output = '8-bit    12-bit     \n-------- ------------\n0*9***** 0*13*168****\n'
