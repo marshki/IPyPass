@@ -23,13 +23,13 @@ class IPyPassTests(unittest.TestCase):
         """Test with and without valid IP address.
         """
         args = ['--ip', '192.168.0.1']
-        ip = parse_cli_args(args)
-        self.assertIsInstance(ip, IPv4Address)
-        self.assertEqual(str(ip), '192.168.0.1')
+        ip_address = parse_cli_args(args)
+        self.assertIsInstance(ip_address, IPv4Address)
+        self.assertEqual(str(ip_address), '192.168.0.1')
 
         args = []
-        ip = parse_cli_args(args)
-        self.assertIsNone(ip)
+        ip_address = parse_cli_args(args)
+        self.assertIsNone(ip_address)
 
     def test_eight_bit_passwd(self):
         """Test valid return value.
