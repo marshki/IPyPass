@@ -16,7 +16,6 @@ from ipypass import parse_cli_args, eight_bit_passwd, twelve_bit_passwd, create_
 
 
 class IPyPassTests(unittest.TestCase):
-
     """Unit tests.
     """
 
