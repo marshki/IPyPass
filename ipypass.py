@@ -7,7 +7,7 @@ import ipaddress
 import logging
 import tkinter as tk
 
-def parse_cli_args(arguments=None):  # Renaming args to arguments to avoid shadowing
+def parse_cli_args(arguments=None):
     """
     Command line parser for IPv4 address of interest, with validation.
 
@@ -81,7 +81,7 @@ def ipypass():
             split_address = str(address).split('.')
             eight_bit = eight_bit_passwd(split_address)
             twelve_bit = twelve_bit_passwd(split_address)
-        except ValueError as exception:  # Catching specific exception
+        except ValueError as exception:
             logging.exception(exception)
             eight_bit = 'Invalid input.'
             twelve_bit = 'Try again.'
@@ -107,7 +107,7 @@ def ipypass():
     root.mainloop()
 
 if __name__ == '__main__':
-    ARGS = parse_cli_args()  # Using ARGS in uppercase
+    ARGS = parse_cli_args()
 
     if ARGS is not None:
         create_table(ARGS)
