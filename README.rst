@@ -33,14 +33,6 @@ Modify the algo to suit your needs.
 
 .. image:: https://github.com/marshki/IPyPass/blob/master/docs/IPyPass.png
 
-Requirements
-------------
-Install required packages:
-
-.. code-block:: Python3
-
-    pip3 install -r requirements.txt
-
 Usage
 -----
 From a shell (argument parser):
