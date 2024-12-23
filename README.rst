@@ -1,4 +1,4 @@
-IPyPass :closed_lock_with_key::tools:
+IPyPass :closed_lock_with_key: :tools:
 ========================================================================================
 |travis| |codacy| |maintained| |python| |mit| |open source|
 
