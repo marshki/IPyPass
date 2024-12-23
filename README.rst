@@ -33,6 +33,10 @@ Modify the algo to suit your needs.
 
 .. image:: https://github.com/marshki/IPyPass/blob/master/docs/IPyPass.png
 
+Requirements
+------------
+None.
+
 Usage
 -----
 From a shell (argument parser):
