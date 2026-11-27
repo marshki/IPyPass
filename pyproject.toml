@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ipypass"
+version = "1.0.0"
+description = "Turn an IPv4 address into 8- and 12-character passwords."
+readme = "README.rst"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+
+[project.scripts]
+ipypass = "ipypass:main"
+
+[tool.setuptools]
+py-modules = ["ipypass"]
