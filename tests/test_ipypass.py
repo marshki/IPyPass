@@ -3,11 +3,6 @@
 """Unit test class.
 """
 
-import sys
-import os
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 import unittest
 from ipaddress import IPv4Address
 from io import StringIO
