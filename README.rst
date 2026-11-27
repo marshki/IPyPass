@@ -31,42 +31,53 @@ IP-based password generator
 Python3 utility (w/Tkinter) for converting IPv4 IP address to an 8- or 12-bit password.
 Modify the algo to suit your needs.
 
-.. image:: https://github.com/marshki/IPyPass/blob/master/docs/IPyPass.png
+.. image:: docs/IPyPass.png
+   :alt: IPyPass GUI
 
 Requirements
 ------------
-None.
+Python 3.9+. Tkinter is only needed for the GUI.
+
+Install
+-------
+
+.. code-block:: bash
+
+    pipx install git+https://github.com/marshki/IPyPass
 
 Usage
 -----
 From a shell (argument parser):
 
-.. code-block:: Python3
+.. code-block:: bash
 
-    python3 ipypass.py --ip 192.168.1.1
+    ipypass --ip 192.168.1.1
 
-From a shell (interactive):
+From a shell (GUI):
 
-.. code-block:: Python3
+.. code-block:: bash
 
-    python3 ipypass.py
+    ipypass
 
-then, at prompt, enter IPv4 address. Program will:
+then enter an IPv4 address in the window and click **Convert**. Program will:
 
 * validate address
 * split address by '.'
-* take 3rd octet and append `*`
-* take 4th octet then add 8 or 12 and append `*`
-  such that the string is 8 or 12 characters in length. 
+* take 3rd octet and append ``*``
+* take 4th octet, add 8 or 12, and append ``*``
+* (12-bit only) append 2nd octet
+* pad with ``*`` so the string is 8 or 12 characters in length
 
-For example: 
+For example:
 
-.. csv-table:: 
+.. csv-table::
    :header: "IP address", "8-bit password", "12-bit password"
    :widths: 20, 20, 20
 
    "10.1.1.1", "1*9*****", "1*13*1******"
-   "192.168.1.1", "1*9****", "1*13*168****"
+   "192.168.1.1", "1*9*****", "1*13*168****"
+
+Without installing, run ``python3 ipypass.py`` from the repo instead of ``ipypass``.
 
 Change Log
 ----------
