@@ -107,10 +107,14 @@ def ipypass():
 
     root.mainloop()
 
-if __name__ == '__main__':
-    ARGS = parse_cli_args()
+def main():
+    """Run CLI if IP address is given, otherwise run GUI."""
+    args = parse_cli_args()
 
-    if ARGS is not None:
-        create_table(ARGS)
+    if args is not None:
+        create_table(args)
     else:
         ipypass()
+
+if __name__ == '__main__':
+    main()
