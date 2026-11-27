@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ipypass"
-version = "1.0.0"
+version = "1.2.0"
 description = "Turn an IPv4 address into 8- and 12-character passwords."
 readme = "README.rst"
 license = { file = "LICENSE" }

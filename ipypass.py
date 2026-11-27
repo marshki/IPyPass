@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Take IPv4 address and return 8- or 12-bit passwords."""
+"""Take IPv4 address and return 8- or 12-character passwords."""
 
 import argparse
 import ipaddress
@@ -24,28 +24,28 @@ def parse_cli_args(arguments=None):
 
     return arguments.ip if hasattr(arguments, 'ip') else None
 
-def eight_bit_passwd(split_address):
+def eight_char_passwd(split_address):
     """
-    Transform IP address to 8-bit password.
+    Transform IP address to 8-character password.
 
     Args:
         split_address: List containing the four octets of the IP address.
 
     Returns:
-        8-bit password.
+        8-character password.
     """
     return (split_address[2] + '*' +
             str(int(split_address[3]) + 8)).ljust(8, '*')
 
-def twelve_bit_passwd(split_address):
+def twelve_char_passwd(split_address):
     """
-    Transform IP address to 12-bit password.
+    Transform IP address to 12-character password.
 
     Args:
         split_address: List containing the four octets of the IP address.
 
     Returns:
-        12-bit password.
+        12-character password.
     """
     return (split_address[2] + '*' +
             str(int(split_address[3]) + 12) + '*' +
@@ -62,16 +62,16 @@ def create_table(ip_address):
         Table with transformed output.
     """
     split_address = str(ip_address).split('.')
-    print('8-bit   ', '12-bit     ')
+    print('8-char  ', '12-char    ')
     print('--------', '------------')
-    print(eight_bit_passwd(split_address), twelve_bit_passwd(split_address))
+    print(eight_char_passwd(split_address), twelve_char_passwd(split_address))
 
 def ipypass():
     """
-    Transform IPv4 address to 8- or 12-bit password (GUI).
+    Transform IPv4 address to 8- or 12-character password (GUI).
 
     Returns:
-        8- and 12-bit passwords.
+        8- and 12-character passwords.
     """
     # Import tkinter here so CLI works on systems without Tk.
     import tkinter as tk  # pylint: disable=import-outside-toplevel
@@ -80,14 +80,14 @@ def ipypass():
         try:
             address = ipaddress.IPv4Address(ip_address)
             split_address = str(address).split('.')
-            eight_bit = eight_bit_passwd(split_address)
-            twelve_bit = twelve_bit_passwd(split_address)
+            eight_char = eight_char_passwd(split_address)
+            twelve_char = twelve_char_passwd(split_address)
         except ValueError as exception:
             logging.exception(exception)
-            eight_bit = 'Invalid input.'
-            twelve_bit = 'Try again.'
-        eight_bit_label.config(text=eight_bit)
-        twelve_bit_label.config(text=twelve_bit)
+            eight_char = 'Invalid input.'
+            twelve_char = 'Try again.'
+        eight_char_label.config(text=eight_char)
+        twelve_char_label.config(text=twelve_char)
 
     root = tk.Tk()
     root.title("IPyPass")
@@ -99,11 +99,11 @@ def ipypass():
     convert_button = tk.Button(root, text="Convert", command=on_convert)
     convert_button.pack()
 
-    eight_bit_label = tk.Label(root, text="", width=16)
-    eight_bit_label.pack()
+    eight_char_label = tk.Label(root, text="", width=16)
+    eight_char_label.pack()
 
-    twelve_bit_label = tk.Label(root, text="", width=16)
-    twelve_bit_label.pack()
+    twelve_char_label = tk.Label(root, text="", width=16)
+    twelve_char_label.pack()
 
     root.mainloop()
 

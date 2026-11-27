@@ -11,3 +11,5 @@ IPyPass Changes Log
     * 2023-AUG-19 -- Merge. Unit tests.
 1.1.3
     * 2024-DEC-15 -- GUI added (Tkinter).
+1.2.0
+    * 2026-NOV-27 -- Packaging (pyproject.toml). "bit" renamed to "character".

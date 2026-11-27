@@ -28,7 +28,7 @@ IPyPass :closed_lock_with_key: :unlock:
 
 IP-based password generator
 ---------------------------
-Python3 utility (w/Tkinter) for converting IPv4 IP address to an 8- or 12-bit password.
+Python3 utility (w/Tkinter) for converting IPv4 IP address to an 8- or 12-character password.
 Modify the algo to suit your needs.
 
 .. image:: docs/IPyPass.png
@@ -65,13 +65,13 @@ then enter an IPv4 address in the window and click **Convert**. Program will:
 * split address by '.'
 * take 3rd octet and append ``*``
 * take 4th octet, add 8 or 12, and append ``*``
-* (12-bit only) append 2nd octet
+* (12-character only) append 2nd octet
 * pad with ``*`` so the string is 8 or 12 characters in length
 
 For example:
 
 .. csv-table::
-   :header: "IP address", "8-bit password", "12-bit password"
+   :header: "IP address", "8-character password", "12-character password"
    :widths: 20, 20, 20
 
    "10.1.1.1", "1*9*****", "1*13*1******"
