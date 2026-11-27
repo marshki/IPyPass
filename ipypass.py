@@ -7,8 +7,7 @@ import ipaddress
 import logging
 
 def parse_cli_args(arguments=None):
-    """
-    Command line parser for IPv4 address of interest, with validation.
+    """Command line parser for IPv4 address of interest, with validation.
 
     Returns:
         IPv4 address as an instance of ipaddress.IPv4Address.
@@ -25,8 +24,7 @@ def parse_cli_args(arguments=None):
     return arguments.ip if hasattr(arguments, 'ip') else None
 
 def eight_char_passwd(split_address):
-    """
-    Transform IP address to 8-character password.
+    """Transform IP address to 8-character password.
 
     Args:
         split_address: List containing the four octets of the IP address.
@@ -38,8 +36,7 @@ def eight_char_passwd(split_address):
             str(int(split_address[3]) + 8)).ljust(8, '*')
 
 def twelve_char_passwd(split_address):
-    """
-    Transform IP address to 12-character password.
+    """Transform IP address to 12-character password.
 
     Args:
         split_address: List containing the four octets of the IP address.
@@ -52,8 +49,7 @@ def twelve_char_passwd(split_address):
             split_address[1]).ljust(12, '*')
 
 def create_table(ip_address):
-    """
-    Create a crude table.
+    """Create a crude table.
 
     Args:
         ip_address: The IP address.
@@ -67,8 +63,7 @@ def create_table(ip_address):
     print(eight_char_passwd(split_address), twelve_char_passwd(split_address))
 
 def ipypass():
-    """
-    Transform IPv4 address to 8- or 12-character password (GUI).
+    """Transform IPv4 address to 8- or 12-character password (GUI).
 
     Returns:
         8- and 12-character passwords.
