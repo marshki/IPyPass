@@ -5,7 +5,6 @@
 import argparse
 import ipaddress
 import logging
-import tkinter as tk
 
 def parse_cli_args(arguments=None):
     """
@@ -74,6 +73,8 @@ def ipypass():
     Returns:
         8- and 12-bit passwords.
     """
+    # Import tkinter here so CLI works on systems without Tk.
+    import tkinter as tk  # pylint: disable=import-outside-toplevel
     def on_convert():
         ip_address = ip_address_entry.get()
         try:
